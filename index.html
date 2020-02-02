@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GET Parameter Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <h1>get PARAMETER Assignment</h1>
+    <main>
+    <h3>Enter your information below and click "View Results" to see your results.<br></h3>
+
+    <!-- sets error message-->
+    <?php if (!empty($error_message)) { ?>
+    <p class="error"><?php echo htmlspecialchars($error_message); ?></p>
+    <?php } ?>
+
+
+      <!--form-->
+      <form action="displayParameters.php" method="get">
+      
+        <div id="data">
+          <label>First Name:</label>
+          <span><input type="text" name="firstName"><br></span>
+      
+          <label>Last Name:</label>
+          <span><input type="text" name="lastName"><br></span>
+      
+          <label>Age (in years):</label>
+          <span><input type="number" name="age"></span><br>
+        </div>
+        <br>
+        <div class="buttons">
+          <input type="submit" value="View Results"><br>
+        </div>
+      
+      </form>
+      </main>
+  </body>
+</html>
